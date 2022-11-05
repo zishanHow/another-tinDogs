@@ -12,7 +12,7 @@ body{
     width: 100%;
     margin: 0 auto;
     background: linear-gradient(180deg, #FFFFFF 0%, #F6F7FB 100%);
-    box-shadow: 0px 0px 2px black;
+    box-shadow: 0px 0px 1px black;
 }
 @media (min-width: 551px){
     .container{
@@ -66,6 +66,7 @@ header .logo {
 /* start feed section */
 .feed{
     margin: 0 .8em;
+    padding-top: .5em;
 }
 
 .feed img{
