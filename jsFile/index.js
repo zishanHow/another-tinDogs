@@ -36,22 +36,19 @@ function yes() {
     currentDog.setMatchStatus(true)
     
     setTimeout(() => {
-        document.getElementById("like").style.display = "flex";
+        document.getElementById("like").style.display = "block";
     }, 100)
     setTimeout(()=>{
         getNewDog()
     }, 1000)
-    console.log('like')
 }
-// if (dogs.hasBeenSwiped = true)
 
 function no() {
     currentDog.setMatchStatus()
     setTimeout(()=>{
-        document.getElementById("nope").style.display = "flex"
+        document.getElementById("nope").style.display = "block"
     }, 100)
     setTimeout(()=>{
         getNewDog()
     }, 1000)
-    console.log("dislike")
 }

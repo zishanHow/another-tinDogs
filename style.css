@@ -113,8 +113,8 @@ header .logo {
     top: 9.5em;
     transform: rotate(-20deg);
 }
-
-.reactions img {
+#like,
+#nope {
     display: none;
     position: inherit;
 }
