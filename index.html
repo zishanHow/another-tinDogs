@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>tindogs</title>
     <!-- css link -->
     <link rel="stylesheet" href="style.css">
     <!-- google gont -->
@@ -12,7 +13,38 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700;900&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    
+    <header class="container">
+        <img src="images/icon-profile.png" alt="Profile">
+        <img class="logo" src="images/logo.png" alt="logo">
+        <img src="images/icon-chat.png" alt="chat">
+    </header>
+
+    <main class="container">
+
+        <section class="feed">
+            <img class="feed-img" src="images/dog-rex.jpg" alt="">
+            <div class="about-dog">
+                <p class="date">Rex, 03</p>
+                <p class="caption">it's me buddy</p>
+            </div>
+        </section>
+
+        <section class="reactions">
+            <img id="like" src="images/badge-like.png" alt="">
+            <img id="nope" src="images/badge-nope.png" alt="">
+        </section>
+
+        <section class="choose">
+
+            <img class="cross" src="images/icon-cross.png" alt="Dislike" data-cross="cross">
+            <img class="heart" src="images/icon-heart.png" alt="Like" data-heart="heart">
+
+        </section>
+
+    </main>
+
 </body>
+
 </html>

@@ -1,0 +1,117 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 100%;
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F6F7FB 100%);
+    box-shadow: 0px 0px 2px black;
+}
+@media (min-width: 551px){
+    .container{
+        width: 550px;
+    }
+}
+
+img{
+    width: 100%;
+}
+
+/* ====================
+     Start typography 
+   ====================*/
+.about-dog .date{
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+.about-dog .caption {
+    font-size: 1.3rem;
+}
+/* ====================
+     End typography 
+   ====================*/
+
+/* ======================
+        Start header 
+   ====================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5em;
+}
+
+header img {
+    align-self: center;
+    width: 34px;
+}
+
+header .logo {
+    width: 84px;
+}
+/* End header */
+
+
+/* ======================
+        Start main 
+   ====================== */
+
+/* start feed section */
+.feed{
+    margin: 0 .8em;
+}
+
+.feed img{
+    border-radius: 15px;
+}
+
+.feed .about-dog {
+    color: white;
+    margin-top: -6em;
+    margin-left: 1.5em;
+}
+/* End feed section */
+
+/* Start reaction section */
+.reactions{
+    max-width: 233px;
+    width: 40%;
+    position: absolute;
+    margin-left: 3.5em;
+    top: 9.5em;
+    transform: rotate(-20deg);
+}
+
+.reactions img {
+    position: inherit;
+}
+/* End reaction section */
+
+/* Start choose section */
+.choose{
+    padding-top: 3em;
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    box-sizing: content-box;
+}
+.choose img{
+    padding: 1.5em;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.choose img:hover,
+.choose img:focus{
+    background-color: #DBFFF4;
+}
+/* End Choose section */
