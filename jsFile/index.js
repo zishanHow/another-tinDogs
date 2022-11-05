@@ -25,6 +25,7 @@ function render() {
     }
 }
 
+
 // give new dogs form the dogs array. each time
 function getNewDog() {
     currentDogIndex += 1
@@ -34,21 +35,22 @@ function getNewDog() {
 
 function yes() {
     currentDog.setMatchStatus(true)
-    
-    setTimeout(() => {
-        document.getElementById("like").style.display = "block";
-    }, 100)
-    setTimeout(()=>{
-        getNewDog()
-    }, 1000)
+
+
+    document.getElementById("like").style.display = "block";
+
+
+    getNewDog()
+
 }
 
 function no() {
-    currentDog.setMatchStatus()
-    setTimeout(()=>{
-        document.getElementById("nope").style.display = "block"
-    }, 100)
-    setTimeout(()=>{
-        getNewDog()
-    }, 1000)
+    currentDog.setMatchStatus(false)
+
+    document.getElementById("nope").style.display = "block"
+
+
+    getNewDog()
+
 }
+
