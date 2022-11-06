@@ -2,12 +2,14 @@ import dogs from "../jsFile/data.js";
 import Feed from "../jsFile/feed.js"
 
 let currentDogIndex = 0
+// couldn't abale to add likeCount feature.
+let likeCount = []
+let isWaiting = false
 // setting new instance of dogs.
 let currentDog = new Feed(dogs[currentDogIndex])
 
 const crossEl = document.getElementById("cross")
 const heartEl = document.getElementById("heart")
-
 
 heartEl.addEventListener('click', yes)
 crossEl.addEventListener('click', no)
@@ -15,21 +17,20 @@ crossEl.addEventListener('click', no)
 render()
 
 // render the main function
-function render() {
+function render(e) {
     let feedEl = document.getElementById("feed")
 
     if (currentDogIndex < dogs.length) {
         feedEl.innerHTML = currentDog.getFeedHtml()
+    } else if (currentDogIndex = dogs.length) {
+        feedEl.innerHTML = currentDog.getEndMessageHtml(likeCount.length)
     } else {
-        feedEl.innerHTML = currentDog.getEndMessageHtml()
+        location.reload()
     }
 
-    setTimeout(()=>{
-        document.getElementById("like").style.display = "none";
-        document.getElementById("nope").style.display = "none"
-    }, 100)
+    document.getElementById("like").style.display = "none"
+    document.getElementById("nope").style.display = "none"
 }
-
 
 // give new dogs form the dogs array. each time
 function getNewDog() {
@@ -40,20 +41,30 @@ function getNewDog() {
 
 function yes() {
     currentDog.setMatchStatus(true)
-    document.getElementById("like").style.display = "block";
 
-    setTimeout(()=>{
-        getNewDog()
-    }, 1000)
+    if (currentDogIndex < dogs.length) {
+        document.getElementById("like").style.display = "block"
+    }
+    if (!isWaiting) {
+        isWaiting = true
+        setTimeout(() => {
+            isWaiting = false
+            getNewDog()
+        }, 1000)
+    }
 }
 
 function no() {
     currentDog.setMatchStatus(false)
-    document.getElementById("nope").style.display = "block"
-    
-    setTimeout(()=>{
-        getNewDog()
-    }, 1000)
 
+    if (currentDogIndex < dogs.length) {
+        document.getElementById("nope").style.display = "block"
+    }
+    if (!isWaiting) {
+        isWaiting = true
+        setTimeout(() => {
+            isWaiting = false
+            getNewDog()
+        }, 1000)
+    }
 }
-

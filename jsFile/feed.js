@@ -1,14 +1,14 @@
 class Feed {
-    constructor(data){
+    constructor(data) {
         Object.assign(this, data)
     }
 
-    setMatchStatus(bool){
+    setMatchStatus(bool) {
         this.hasBeenLiked = bool
         this.hasBeenSwiped = true
     }
 
-    getFeedHtml(){
+    getFeedHtml() {
         const { name, avatar, age, bio } = this
         return `
             <img class="feed-img" src="${avatar}" alt="">
@@ -18,12 +18,12 @@ class Feed {
             </div>
         `
     }
-    getEndMessageHtml(){
+    getEndMessageHtml(count) {
         return `
             <div class="end-message">
-                <p>Hey you reach the end of dogs in your area</p>
-                <p>See how many Dog you like</p>
-                <img src="images/logo.png" alt="">
+                <p>Hey you reach the end of dogs in your <span>Area</span>😥</p>
+                <p>You have ❤️ ( ${count} ), Dogs!</p>
+                <a href="index.html"><img src="images/logo.png" alt=""></a>
             </div>
         `
     }

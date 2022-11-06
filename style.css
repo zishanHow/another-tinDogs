@@ -1,40 +1,55 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
 }
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
     font-size: 100%;
 }
 
-.container{
+.container {
     width: 100%;
     margin: 0 auto;
     background: linear-gradient(180deg, #FFFFFF 0%, #F6F7FB 100%);
     box-shadow: 0px 0px 1px black;
 }
-@media (min-width: 451px){
-    .container{
+
+@media (min-width: 451px) {
+    .container {
         width: 450px;
     }
 }
 
-img{
+img {
     width: 100%;
 }
 
 /* ====================
      Start typography 
    ====================*/
-.about-dog .date{
+.about-dog .date {
     font-size: 1.5rem;
     font-weight: 900;
     letter-spacing: 1px;
 }
+
 .about-dog .caption {
     font-size: 1.3rem;
 }
+
+
+.end-message p {
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ff0054;
+}
+
+.end-message p span {
+    text-decoration: underline;
+    font-style: italic;
+}
+
 /* ====================
      End typography 
    ====================*/
@@ -56,6 +71,7 @@ header img {
 header .logo {
     width: 84px;
 }
+
 /* End header */
 
 
@@ -64,12 +80,12 @@ header .logo {
    ====================== */
 
 /* start feed section */
-.feed{
+.feed {
     margin: 0 .8em;
     padding-top: .5em;
 }
 
-.feed img{
+.feed img {
     border-radius: 15px;
 }
 
@@ -80,7 +96,7 @@ header .logo {
 }
 
 /* feed end message */
-.end-message{
+.end-message {
     font-size: 1.5rem;
     text-align: center;
     padding: .5em;
@@ -94,18 +110,15 @@ header .logo {
     justify-content: space-between;
 }
 
-.end-message p {
-    font-weight: 700;
-    color: red;
-}
 .end-message img {
-    width: 120px;
+    min-width: 80px;
+    width: 150px;
 }
 
 /* End feed section */
 
 /* Start reaction section */
-.reactions{
+.reactions {
     max-width: 190px;
     width: 40%;
     position: absolute;
@@ -113,15 +126,17 @@ header .logo {
     top: 9.5em;
     transform: rotate(-20deg);
 }
+
 #like,
 #nope {
     display: none;
     position: inherit;
 }
+
 /* End reaction section */
 
 /* Start choose section */
-.choose{
+.choose {
     padding-top: 3em;
     padding-bottom: 1em;
     margin-bottom: 2em;
@@ -130,14 +145,16 @@ header .logo {
     gap: 1em;
     box-sizing: content-box;
 }
-.choose img{
+
+.choose img {
     padding: 1.5em;
     width: 100px;
     border-radius: 50%;
 }
 
 .choose img:hover,
-.choose img:focus{
+.choose img:focus {
     background-color: #DBFFF4;
 }
+
 /* End Choose section */
