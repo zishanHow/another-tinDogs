@@ -14,9 +14,9 @@ body{
     background: linear-gradient(180deg, #FFFFFF 0%, #F6F7FB 100%);
     box-shadow: 0px 0px 1px black;
 }
-@media (min-width: 551px){
+@media (min-width: 451px){
     .container{
-        width: 550px;
+        width: 450px;
     }
 }
 
@@ -106,7 +106,7 @@ header .logo {
 
 /* Start reaction section */
 .reactions{
-    max-width: 233px;
+    max-width: 190px;
     width: 40%;
     position: absolute;
     margin-left: 3.5em;
