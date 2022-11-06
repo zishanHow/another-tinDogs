@@ -23,6 +23,11 @@ function render() {
     } else {
         feedEl.innerHTML = currentDog.getEndMessageHtml()
     }
+
+    setTimeout(()=>{
+        document.getElementById("like").style.display = "none";
+        document.getElementById("nope").style.display = "none"
+    }, 100)
 }
 
 
@@ -35,22 +40,20 @@ function getNewDog() {
 
 function yes() {
     currentDog.setMatchStatus(true)
-
-
     document.getElementById("like").style.display = "block";
 
-
-    getNewDog()
-
+    setTimeout(()=>{
+        getNewDog()
+    }, 1000)
 }
 
 function no() {
     currentDog.setMatchStatus(false)
-
     document.getElementById("nope").style.display = "block"
-
-
-    getNewDog()
+    
+    setTimeout(()=>{
+        getNewDog()
+    }, 1000)
 
 }
 
